@@ -25,8 +25,8 @@ function elementDrag(e) {
     console.log(e.target.style.top);
     console.log(e.target.style.left);
     // set the element's new position:
-    e.target.style.top = (e.target.style.top - window.pos2) + "px";
-    e.target.style.left = (e.target.style.left - window.pos1) + "px";
+    e.target.style.top = (parseInt(e.target.style.top.substring(0,e.target.style.top.length - 2)) - window.pos2) + "px";
+    e.target.style.left = (parseInt(e.target.style.left.substring(0,e.target.style.left.length - 2)) - window.pos1) + "px";
 }
 
 function closeDragElement(e) {
