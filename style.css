@@ -27,7 +27,7 @@ h2, span, p, h1, a, li{
   -o-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
-  /*color: #629DD1;*/
+  color: #629DD1;
 }
 
 .navbar{background: rgba(0, 0, 0, 0);}
