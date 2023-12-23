@@ -1,5 +1,10 @@
 body, html {height: 100%;}
 
+:root {
+  --background: brown;
+  --text: brown;
+}
+
 .poster{
   width: 100%;
   height: auto;
@@ -21,13 +26,13 @@ h2, span, p, h1, a, li{
 }
 
 #background{
-  background-color: #ffffff;
+  background-color: var(--background);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
-  color: #000000;
+  color: var(--text);
 }
 
 .navbar{background: rgba(0, 0, 0, 0);}
