@@ -1,5 +1,6 @@
 var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
 function dragMouseDown(e) {
+    console.log("Opening");
     e = e || window.event;
     //e.preventDefault();
     // get the mouse cursor position at startup:
@@ -13,6 +14,7 @@ function dragMouseDown(e) {
 }
 
 function elementDrag(e) {
+    console.log("Dragging");
     e = e || window.event;
     e.preventDefault();
     // calculate the new cursor position:
@@ -26,6 +28,7 @@ function elementDrag(e) {
 }
 
 function closeDragElement(e) {
+    console.log("Closing");
     /* stop moving when mouse button is released:*/
     e.target.onmouseup = null;
     e.target.onmousemove = null;
