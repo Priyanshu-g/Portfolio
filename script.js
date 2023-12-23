@@ -6,8 +6,8 @@ function dragMouseDown(e) {
     // get the mouse cursor position at startup:
     window.pos3 = e.pageX ;
     window.pos4 = e.pageY ;
-    e.target.style.top = (e.pageX) + "px";
-    e.target.style.left = (e.pageY) + "px"
+    //e.target.style.top = (e.pageX) + "px";
+    //e.target.style.left = (e.pageY) + "px"
     e.target.onmouseup = closeDragElement;
     // call a function whenever the cursor moves:
     e.target.onmousemove = elementDrag;
