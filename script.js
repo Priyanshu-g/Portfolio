@@ -22,8 +22,8 @@ function elementDrag(e) {
     window.pos2 = window.pos4 - e.pageY;
     window.pos3 = e.pageX;
     window.pos4 = e.pageY;
-    console.log(e.target.style.top - window.pos2);
-    console.log(e.target.style.left - window.pos1);
+    console.log(e.target.style.top);
+    console.log(e.target.style.left);
     // set the element's new position:
     e.target.style.top = (e.target.style.top - window.pos2) + "px";
     e.target.style.left = (e.target.style.left - window.pos1) + "px";
