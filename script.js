@@ -1,9 +1,5 @@
 function dragElement(elmnt) {
-  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  elmnt.onmousedown = dragMouseDown;
   
-  
-
   function dragMouseDown(e) {
     e = e || window.event;
     e.preventDefault();
@@ -14,8 +10,11 @@ function dragElement(elmnt) {
     // call a function whenever the cursor moves:
     document.onmousemove = elementDrag;
   }
+  elmnt.onmousedown = dragMouseDown;
+}
 
-  function elementDrag(e) {
+function onDown(e) {
+    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
     e = e || window.event;
     e.preventDefault();
     // calculate the new cursor position:
@@ -26,11 +25,12 @@ function dragElement(elmnt) {
     // set the element's new position:
     elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
     elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-  }
+}
 
-  function closeDragElement() {
+function closeDragElement() {
     // stop moving when mouse button is released:
     document.onmouseup = null;
     document.onmousemove = null;
-  }
 }
+
+  
