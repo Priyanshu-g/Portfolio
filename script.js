@@ -1,14 +1,21 @@
-document.getElementById("background-pick").addEventListener("input", function() {
-    var r = document.querySelector(':root');
-    var rs = getComputedStyle(r);
-    r.style.setProperty('--background', this.value);
-})
-
-document.getElementById("text-color").addEventListener("input", function() {
-    var r = document.querySelector(':root');
-    var rs = getComputedStyle(r);
-    r.style.setProperty('--text', this.value);
-})
+window.addEventListener("DOMContentLoaded", (event) => {
+    const el = document.getElementById('background-pick');
+    if (el) {
+        el.addEventListener("input", function() {
+            var r = document.querySelector(':root');
+            var rs = getComputedStyle(r);
+            r.style.setProperty('--background', this.value);
+        })
+    }
+    const text = document.getElementById('text-color');
+    if (text) {
+        text.addEventListener("input", function() {
+            var r = document.querySelector(':root');
+            var rs = getComputedStyle(r);
+            r.style.setProperty('--text', this.value);
+        })
+    }
+});
 
 var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
 function dragMouseDown(e) {
