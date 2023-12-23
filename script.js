@@ -15,8 +15,6 @@ function dragMouseDown(e) {
 
 function elementDrag(e) {
     console.log("Dragging");
-    console.log(pos1);
-    console.log(pos2);
     e = e || window.event;
     e.preventDefault();
     // calculate the new cursor position:
@@ -24,6 +22,8 @@ function elementDrag(e) {
     window.pos2 = window.pos4 - e.pageY;
     window.pos3 = e.pageX;
     window.pos4 = e.pageY;
+    console.log(e.target.style.top - window.pos2);
+    console.log(e.target.style.left - window.pos1);
     // set the element's new position:
     e.target.style.top = (e.target.style.top - window.pos2) + "px";
     e.target.style.left = (e.target.style.left - window.pos1) + "px";
