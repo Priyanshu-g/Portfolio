@@ -8,7 +8,8 @@ function dragMouseDown(e) {
     //e.target.style.top = (e.pageX) + "px";
     //e.target.style.left = (e.pageY) + "px"
     e.target.onmouseup = closeDragElement;
-    e.target.mouseleave = closeDragElement;
+    e.target.onmouseleave = closeDragElement;
+    e.target.onmouseenter = closeDragElement;
     // call a function whenever the cursor moves:
     e.target.onmousemove = elementDrag;
 }
@@ -30,7 +31,8 @@ function closeDragElement(e) {
     /* stop moving when mouse button is released:*/
     e.target.onmouseup = null;
     e.target.onmousemove = null;
-    e.target.mouseleave = null;
+    e.target.onmouseleave = null;
+    e.target.onmouseenter = null;
 }
 
   
