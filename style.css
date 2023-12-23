@@ -1,0 +1,70 @@
+body, html {height: 100%;}
+
+.poster{
+  width: 100%;
+  height: auto;
+  mix-blend-mode: normal;
+}
+
+
+h2, span, p, h1, a, li{
+  mix-blend-mode: hard-light;
+}
+
+
+.center{
+  text-align: center;
+}
+
+#tag{
+  margin-bottom: -10px;
+}
+
+#background{
+  background-color: #ffffff;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  colour: #629DD1;
+}
+
+.navbar{background: rgba(0, 0, 0, 0);}
+
+.navbar::after{
+  position: absolute;
+  content: '';
+  border-bottom: 1px solid black;
+  width: 98%;
+  transform: translateX(-50%);
+  bottom: 0px;
+  left: 50%;
+}
+
+.verticalDivider{
+  border-left: 1px solid black;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+h1, h2, h3, h4, h5, h6, h7{
+  font-weight: normal;
+}
+
+.display-5 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.display-6 {
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.underlined{
+  border-bottom: 1px solid black;
+  padding: 0 0 1px;
+}

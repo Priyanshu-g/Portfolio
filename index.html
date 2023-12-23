@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+    </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+    </script>
+
+  <script>
+    //Tab changing code
+    $(document).ready(function () {
+      $('.tabshift').hide();
+      $('#Home').show();
+    });
+    function tab(element) {
+      var inner = element.innerHTML
+      $('.active').removeClass('active');
+      $(element).parent().addClass('active');
+      $('.tabshift').hide();
+      $('#' + inner).show();
+    }
+  </script>
+
+</head>
+
+<body id="background">
+
+  <nav class="navbar navbar-expand-lg">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+
+        <span class="verticalDivider"></span>
+
+        <li class="nav-item active">
+          <button class="nav-link btn" onclick="tab(this)">Home</button>
+        </li>
+
+        <span class="verticalDivider"></span>
+
+        <li class="nav-item">
+          <button class="nav-link btn" onclick="tab(this)">Glue-Gun-Holder</button>
+        </li>
+
+        <span class="verticalDivider"></span>
+
+        <li class="nav-item">
+          <button class="nav-link btn" onclick="tab(this)">Architecture</button>
+        </li>
+
+        <span class="verticalDivider"></span>
+
+        <li class="nav-item">
+          <button class="nav-link btn" onclick="tab(this)">Cheat-Sheet</button>
+        </li>
+
+        <span class="verticalDivider"></span>
+
+        <li class="nav-item active">
+          <button class="nav-link btn" onclick="tab(this)">ESP8266-Weather-Station</button>
+        </li>
+
+        <span class="verticalDivider"></span>
+
+        <li class="nav-item active">
+          <button class="nav-link btn" onclick="tab(this)">Match-3-Game</button>
+        </li>
+
+        <span class="verticalDivider"></span>
+
+      </ul>
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <p class="nav-link lead" id="tag">By: Priyanshu.G</p>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="jumbotron" style="background: rgba(0, 0, 0, 0); padding-left: 30px; padding-right: 30px;">
+
+    <div id="Home" class="tabshift">
+      <h1 class="display-4">Home</h1>
+      <h2 class="display-6">By: Priyanshu Ghosh</h2>
+      <p class="lead"><span class="underlined">Prologue</span><br>
+        Hello, my name is Priyanshu Ghosh. I am an aspiring computer scientist, and this site is an archive of all my
+        projects. Here you can see work on a variety of things ranging from CAD software to web design. This site
+        includes pictures and data explaining and advertising my work. I aspire to be someone working somewhere in the
+        tech field and I hope this makes my case as to why.<br><br>
+        I made this website the format of my portfolio because I wanted to grow my knowledge of web design and the
+        aesthetic aspect of HTML. If you look at my Cheat Sheet Assignment tab you can see how I use javascript to take,
+        manipulate and display information. This website, however, is for me to test how well I can display information.
+      </p>
+      <br>
+      <p>
+        A few extra projects
+        <ul>
+          <li><a href="https://Calculus-CPT.priyanshughosh.repl.co">Calculus Study Guide</a></li>
+        </ul>
+      </p>
+    </div>
+
+    <div id="Glue-Gun-Holder" class="tabshift">
+      <h1 class="display-4">The Glue Gun Holder</h1>
+      <p class="lead"><span class="underlined">What was the project?</span><br>
+        The project was to make a glue gun holder for the loose glue guns in class, we would partner up and contrusct a
+        glue gun.<br>The most important part of the project was using the design process.<br><br>
+      </p>
+      <span class="center">
+        <p class="lead"><span class="underlined">My design</span></p>
+      </span><br><br>
+      <div class="container">
+        <div class="row">
+
+          <div class="col border-left border-dark">
+            <img src="Poster.png" class="poster">
+          </div>
+
+          <div class="col border-right border-dark">
+            <p class="lead">
+              On the left is the projects poster, it includes pictures of the final product and the process to get
+              there<br><br>
+              <span class="underlined">Skills</span><br>
+              This project was to learn and practice the design process. These are some of the skills shown within the
+              project:
+            </p>
+            <br>
+            <ul>
+              <li class="lead">Use of the design process</li>
+              <li class="lead">Equal work distrbution</li>
+              <li class="lead">Construction skills</li>
+              <li class="lead">Use of inventor and CAD software</li>
+              <li class="lead">Displaying the design process</li>
+            </ul>
+            <br>
+            <p class="lead">
+              <span class="underlined">CAD</span><br>
+              This project was first designed and built on a CAD software known as inventor (2019).<br>
+              Heres some pictures of the design in the software it self:<br><br>
+            </p>
+            <img src="Screenshot (10).png" class="poster"><br><br>
+            <img src="Screenshot (11).png" class="poster"><br><br>
+            <p class="lead">
+              <span class="underlined">So what did I take away from the project?</span><br>
+            <ul>
+              <li class="lead">How to use joints to allow movement in CAD</li>
+              <li class="lead">How to distrubute works to individual strengths</li>
+              <li class="lead">How to use the design process</li>
+              <li class="lead">Why the design process is effective</li>
+              <li class="lead">How to effectivly display work processes</li>
+            </ul>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="Architecture" class="tabshift">
+      <h1 class="display-4">Architecture</h1>
+      <p class="lead"><span class="underlined">What was the project?</span><br>
+        The project was to partner up, pick a target audience, find a location and design a house. Includes making floor
+        plans, CAD models and a real world (scaled) model.<br>
+        Here are some pictures of the floor plans, CAD models and the real world model:</p>
+
+      <div class="row">
+
+        <div class="col border-left border-dark">
+
+          <span class="underlined lead">Paper Floor Plan</span><br>
+          <img src="Floor plan 1.jpeg" class="poster"><br><br>
+
+          <span class="underlined lead">CAD Floor Plan</span><br>
+          <img src="CAD floor plan.png" class="poster"><br><br>
+        </div>
+
+        <div class="col border-right border-dark">
+          <p class="lead">
+            <span class="underlined lead">Skills</span><br>
+            Skills shown in the project:
+          <ul>
+            <li class="lead">Teamwork</li>
+            <li class="lead">Precision in plans and blueprints</li>
+            <li class="lead">Making Floor Plans</li>
+            <li class="lead">Using CAD software to make homes</li>
+            <li class="lead">Constructing and making models</li>
+            <li class="lead">Effective usage of time</li>
+          </ul><br><br>
+          <span class="underlined lead">CAD</span><br>
+          <p class="lead">
+            The CAD software known as Revit was used to build, model and design our house before making the real world
+            model</p><br><br>
+          <span class="underlined lead">So what did I take away from the project?</span><br>
+          <ul>
+            <li class="lead">Introduced to Revit</li>
+            <li class="lead">Building an accurate model</li>
+            <li class="lead">The in and outs of designing a house</li>
+            <li class="lead">The Eco Leed System</li>
+          </ul>
+          <span class="underlined lead">CAD Model Renders</span><br>
+          <img src="CAD Render.png" class="poster"><br><br>
+
+          <span class="underlined lead">Real World Model</span><br>
+          <img src="Model.png" class="poster"><br><br>
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div id="Cheat-Sheet" class="tabshift">
+      <h1 class="display-4">The Cheat Sheet Assignment</h1>
+      <span class="underlined lead">The site</span><br>
+      <a class="lead" href="https://bit.ly/3c6rJcm" target="_blank">https://bit.ly/3c6rJcm</a><br>
+      <span class="underlined lead">The story</span><br>
+      <p class="lead">This was at first a personal project to see what I can do with jQuery and javascript. The new
+        skills we were learning in Comp Eng related heavily to math so it was possible to make calculators for these new
+        topics, all while learning jQuery. That's what this site first was, just something to make calculators on. Then
+        we started learning more technology related to math in tech design. I also wanted to add more to the site so
+        when the cheat sheet assignment was introduced to include all topics covered in one document, this website was a
+        perfect choice. That's how this website went from a small project to a class assignment.</p><br><br>
+      Hello! This is me 2 years older. I am updating the portfolio a bit and thought I should come back and add a bit to
+      this assignment. We never ended up handing in the cheat sheet but I kept the cheat sheet website. To this day I go
+      back and add new topics in math and engineering to help myself out in the future. Nowadays the website is not an
+      assignment it is a personal project that helps me and my classmates to simple yet annoying calculations.
+      <span class="underlined lead"><br></br>Skills</span><br>
+      <p class="lead">Skills both used and gained from the assignment</p>
+      <ul>
+        <li class="lead">jQuery</li>
+        <li class="lead">Bootstrap</li>
+        <li class="lead">HTML, JS, CSS code</li>
+        <li class="lead">Organization of information</li>
+        <li class="lead">Pleasing display of data</li>
+        <li class="lead">Arduino</li>
+        <li class="lead">C++</li>
+        <li class="lead">How to use and calculate resistors</li>
+        <li class="lead">Convert between number bases</li>
+        <li class="lead">Calculate circuit values</li>
+        <li class="lead">How to use and work with of Arduino components</li>
+      </ul>
+    </div>
+
+    <div id="ESP8266-Weather-Station" class="tabshift">
+      <h1 class="display-4">The ESP8266 Weather Station</h1>
+      <p class="lead"><span class="underlined lead">What was this project?</span><br>
+        This project was an independent study unit for computer engineering. Try to build anything with anything in your
+        budget. I chose to make a weather station with an ESP8266. The ESP8266 is a wifi module that works with
+        Arduinos.
+        <br><span class="underlined lead">The Story</span><br>
+        The story of the ESP8266 Weather Station begins with a distance sensor. Initially, the distance sensor was to
+        detect the height of the water and keep track of the water level in an area over some time. Although this seemed
+        doable when the sensor was taken home, sound travelling through water at a different speed wasn't realized until
+        it was too late, and due to covid, the sensor couldn't be swapped out. Resulting in the first project change, to
+        make a temperature sensor that you can place outside and check the weather outdoors from a device indoors.
+      </p><br><br>
+      <div class='container'>
+        <!--to create left to right-->
+        <div class='row'>
+          <div class='col border-left border-dark'>
+            <span class="center">
+              <p class="lead"><span class="underlined">Time Log</span>
+            </span>
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col">Date</th>
+                  <th scope="col">Activity</th>
+                  <th scope="col">Time Spent</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row" class='lead'>Nov, 20th</th>
+                  <td class='lead'>Research</td>
+                  <td class='lead'>2 Hour(s)</td>
+                </tr>
+                <tr>
+                  <th scope="row" class='lead'>Nov 25th</th>
+                  <td class='lead'>Creating Proposal</td>
+                  <td class='lead'>3 Hour(s)</td>
+                </tr>
+                <tr>
+                  <th scope="row" class='lead'>Dec, 10th</th>
+                  <td class='lead'>Opening and install raspberry pi</td>
+                  <td class='lead'>3 Hour(s)</td>
+                </tr>
+                <tr>
+                  <th scope="row" class='lead'>Dec, 12th</th>
+                  <td class='lead'>Still troubleshooting raspberry pi</td>
+                  <td class='lead'>4 Hour(s)</td>
+                </tr>
+                <tr>
+                  <th scope="row" class='lead'>Dec, 14th</th>
+                  <td class='lead'>Attempting to get information from distance sensor on raspberry pi</td>
+                  <td class='lead'>3 Hour(s)</td>
+                </tr>
+                <tr>
+                  <th scope="row" class='lead'>Dec, 15th</th>
+                  <td class='lead'>Looking into methods of displaying the sensor data on a separate device</td>
+                  <td class='lead'>5 Hour(s)</td>
+                </tr>
+                <tr>
+                  <th scope="row" class='lead'>Dec, 16th</th>
+                  <td class='lead'>Using Apache to create web server and display data</td>
+                  <td class='lead'>1 Hour</td>
+                </tr>
+                <tr>
+                  <th scope="row" class='lead'>Dec, 17th</th>
+                  <td class='lead'>Opening and flashing ESP8266 with code to read sensor data</td>
+                  <td class='lead'>5 Hour(s)</td>
+                </tr>
+                <tr>
+                  <th scope="row" class='lead'>Dec, 18th</th>
+                  <td class='lead'>Attempting to use MQTT to connect esp8266 to Raspberry pi </td>
+                  <td class='lead'>3 Hour(s)</td>
+                </tr>
+                <tr>
+                  <th scope="row" class='lead'>Dec, 19th</th>
+                  <td class='lead'>Attempting to use MQTT to connect esp8266 to Raspberry pi </td>
+                  <td class='lead'>3 Hour(s)</td>
+                </tr>
+                <tr>
+                  <th scope="row" class='lead'>Dec, 20th</th>
+                  <td class='lead'>Attempting to use MQTT to connect esp8266 to Raspberry pi</td>
+                  <td class='lead'>3 Hour(s)</td>
+                </tr>
+                <tr>
+                  <th scope="row" class='lead'>Jan, 5th</th>
+                  <td class='lead'>Trying to display both raspberry pi data and esp8266 data on the same web server</td>
+                  <td class='lead'>4 Hour(s)</td>
+                </tr>
+                <tr>
+                  <th scope="row" class='lead'>Jan, 6th</th>
+                  <td class='lead'>Trying to display both raspberry pi data and esp8266 data on the same web server</td>
+                  <td class='lead'>4 Hour(s)</td>
+                </tr>
+                <tr>
+                  <th scope="row" class='lead'>Jan, 7th</th>
+                  <td class='lead'>Trying to display both raspberry pi data and esp8266 data on the same web server</td>
+                  <td class='lead'>4 Hour(s)</td>
+                </tr>
+                <tr>
+                  <th scope="row" class='lead'>Jan, 9th</th>
+                  <td class='lead'>Attempting to establish web server on esp8266 as an alternative</td>
+                  <td class='lead'>3 Hour(s)</td>
+                </tr>
+                <tr>
+                  <th scope="row" class='lead'>Jan, 11th</th>
+                  <td class='lead'>Creating code to display and store a week's worth of sensor data on esp</td>
+                  <td class='lead'>3 Hour(s)</td>
+                </tr>
+                <tr>
+                  <th scope="row" class='lead'>Jan, 12th</th>
+                  <td class='lead'>Creating code to display and store a week's worth of sensor data on esp</td>
+                  <td class='lead'>3 Hour(s)</td>
+                </tr>
+                <tr>
+                  <th scope="row" class='lead'>Jan, 18th</th>
+                  <td class='lead'>Serving up the entire week's data on web server</td>
+                  <td class='lead'>4 Hour(s)</td>
+                </tr>
+                <tr>
+                  <th scope="row" class='lead'>Jan, 19th</th>
+                  <td class='lead'>Serving up the entire week's data on web server</td>
+                  <td class='lead'>4 Hour(s)</td>
+                </tr>
+                <tr>
+                  <th scope="row" class='lead'>Jan, 20th</th>
+                  <td class='lead'>Using Google charts api to display the sensor data in a chart</td>
+                  <td class='lead'>2 Hour(s)</td>
+                </tr>
+                <tr>
+                  <th scope="row" class='lead'>Jan, 21th</th>
+                  <td class='lead'>Using Google charts api to display the sensor data in a chart
+                    <img src="ESP/ESP-data display.png" class="poster">
+                  </td>
+                  <td class='lead'>3 Hour(s)</td>
+                </tr>
+                <tr>
+                  <th scope="row" class='lead'>Jan, 22th</th>
+                  <td class='lead'>Using Google charts api to display the sensor data in a chart<img
+                      src="ESP/ESP-data display2.png" class="poster"></td>
+                  <td class='lead'>3 Hour(s)</td>
+                </tr>
+                <tr>
+                  <th scope="row" class='lead'>Jan, 23th</th>
+                  <td class='lead'>Clean up and site design</td>
+                  <td class='lead'>5 Hour(s)</td>
+                </tr>
+                <tr>
+                  <th scope="row" class='lead'>Jan, 25th</th>
+                  <td class='lead'>Clean up and site design<img src="ESP/ESP-data display3.png" class="poster"></td>
+                  <td class='lead'>4 Hour(s)</td>
+                </tr>
+                <tr>
+                  <th scope="row" class='lead'>Jan, 26th</th>
+                  <td class='lead'>Clean up and site design<img src="ESP/ESP-data display4.png" class="poster"></td>
+                  <td class='lead'>1 Hour(s)</td>
+                </tr>
+                <tr>
+                  <th scope="row" class='lead'>Jan, 27th</th>
+                  <td class='lead'>Clean up and site design<img src="ESP/ESP-data display5.png" class="poster"></td>
+                  <td class='lead'>2 Hour(s)</td>
+                </tr>
+                <tr>
+                  <th scope="row" class='lead'>Jan, 28th</th>
+                  <td class='lead'>Clean up and site design</td>
+                  <td class='lead'>3 Hour(s)</td>
+                </tr>
+                <tr>
+                  <th scope="row" class='lead'>Jan, 30th</th>
+                  <td class='lead'>Clean up and site design<img src="ESP/ESP-data display6.png" class="poster"></td>
+                  <td class='lead'>2 Hour(s)</td>
+                </tr>
+                <tr>
+                  <th scope="row" class='lead'>Feb, 1st</th>
+                  <td class='lead'>Final Testing!!</td>
+                  <td class='lead'>5 Hour(s)</td>
+                </tr>
+                <tr>
+                  <th scope="row" class='lead'>Feb, 2nd</th>
+                  <td class='lead'>Final repairs and fixes</td>
+                  <td class='lead'>3 Hour(s)</td>
+                </tr>
+                <tr>
+                  <th scope="row" class='lead'>Feb, 3rd</th>
+                  <td class='lead'>Report</td>
+                  <td class='lead'>5 Hour(s)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class='col border-right border-dark center'>
+            <p class='lead'><br><br>
+              After the project change there was a lot of issue yet to come. (skip to Dec
+              15th)<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+              The first was hosting the website that should be reachable by all devices in the same network. This went
+              on for a really long time (skip to Jan
+              9th)<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+              The solution was simple. Rather then having the raspberry pi collect the data, transfer is to the esp, and
+              then finally show the data off the esp site, I could just connet the esp to the sensor, collect the data
+              from there and host the data immediatly, skipping need for any raspberry pi! The next and final major
+              issue was using google charts to display the stored data well (skip to Jan,
+              20th)<br><br><br><br><br><br><br><br>
+              This problem was not too big. It only gave me an issue and took so long because I was new to it. Learning
+              new things is always fun, so I was at least motivated to go through with it.
+              <hr />
+            </p>
+            <span class='underlined lead'>Conclusion</span><br>
+            <span class='lead'>Here is what I learned from this project:</span>
+            <ul>
+              <li class="lead">Raspberry Pi</li>
+              <li class="lead">MQTT</li>
+              <li class="lead">ESP8266</li>
+              <li class="lead">ESP8266 Web Hosting</li>
+              <li class="lead">Distance Sensors</li>
+              <li class="lead">Ardunio code (C++)</li>
+              <li class="lead">Google Charts API</li>
+              <li class="lead">Web Design</li>
+              <li class="lead">Apache</li>
+            </ul><br>
+            <span class='underlined lead'>Schematic</span><br><br>
+            <img src="ESP/ESP-Sche.png" class="poster"><br><br>
+            <span class='underlined lead'>Pictorial</span><br><br>
+            <img src="ESP/ESP-Pict.png" class="poster"><br><br>
+            <span class='underlined lead'>Final Model</span><br><br>
+            <img src="ESP/ESP-Model.png" class="poster"><br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="Match-3-Game" class="tabshift">
+      <h1 class="display-4">The Match 3 Game</h1>
+      <p class="lead"><span class="underlined lead">What was this project?</span><br><br>
+        This project was a personal project that I started on my own. A long time hobby of mine is playing games so I
+        thought it was about time I make one of my own. Since this is a personal project I did not document the making
+        of the game. However, after finishing the first version of the game and loving the product I decided to add it
+        to this portfolio.
+      </p><br><br><br>
+      <video width="860" height="480" controls>
+        <source src="Game/Game-Combat-Demo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video><br><br>
+      <p class="lead"><span class="underlined lead">So whats happening?</span><br><br>
+        The video above shows the combat section of the game. It starts on the players turn. The player selected two
+        orbs to swap. Any connection of 3 or more is broken and 2 points are added to the respective element per orb
+        broken. After the points are added the orbs attacks, if they hit shields then the shields take damage, else the
+        enemy player will take damage.
+        <br>
+        <br>
+        After the player turn the computer gets a turn. This is an algorithm that looks at the board and finds possible
+        swaps that allow for good attacks. The computer does the same action as the player and the game proceeds.
+      </p>
+      <div class='container'>
+        <div class='row'>
+          <div class='left'>
+            <span class="underlined lead center">Player 2 Script</span><br><br>
+            <img src="Game/ComputerAlgo.png" class="poster"><br><br>
+          </div>
+          <div class='right'>
+            <span class="underlined lead center">Orbs Matcher Script</span><br><br>
+            <img src="Game/Matcher.png" class="poster"><br><br>
+          </div>
+        </div>
+      </div><br><br>
+      <p class='lead'>
+        <span class="underlined lead center">What did I learn?</span><br><br>
+      <ul>
+        <li class="lead">Unity Ui</li>
+        <li class="lead">Using Unity and Unity objects</li>
+        <li class="lead">Unity Scripts</li>
+        <li class="lead">C#</li>
+        <li class="lead">Computer Algorithms</li>
+        <li class="lead">Game Development</li>
+        <li class="lead">FPS Optimization</li>
+      </ul><br>
+      </p>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
