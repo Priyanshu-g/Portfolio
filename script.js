@@ -18,8 +18,8 @@ function elementDrag(e) {
     pos3 = e.pageX;
     pos4 = e.pageY;
     // set the element's new position:
-    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+    e.target.style.top = (e.target.offsetTop - pos2) + "px";
+    e.target.style.left = (e.target.offsetLeft - pos1) + "px";
 }
 
 function closeDragElement(e) {
