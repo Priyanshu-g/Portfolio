@@ -27,7 +27,7 @@ h2, span, p, h1, a, li{
   -o-background-size: cover;
   background-size: cover;
   background-attachment: fixed;
-  colour: #629DD1;
+  color: #629DD1;
 }
 
 .navbar{background: rgba(0, 0, 0, 0);}
@@ -95,4 +95,9 @@ h1, h2, h3, h4, h5, h6, h7{
 #block{
   position: absolute;
   cursor: move;
+}
+
+.full{
+  width: 100%;
+  height: 100%;
 }
