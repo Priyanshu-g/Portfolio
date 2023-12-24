@@ -1,0 +1,94 @@
+.block{
+  border-style:solid; 
+  background-color:white; 
+  color:black; 
+  border-radius: 5px; 
+  width:fit-content;
+  margin: auto; 
+  border-color:white;
+}
+
+h1{
+  border-style:none none solid none;
+  padding-bottom: 10px;
+}
+.large-img{
+  width: 1000px;
+  height: auto;
+}
+
+.med-img{
+  width: 600px;
+  height: auto;
+}
+
+.Btn { /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 10px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: white; /* Set a background color */
+  color: #A41034; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+.hideBtn{
+  right: 80px;
+  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+i{
+  font-size: 0.5rem;
+}
+
+.Btn1 { 
+  bottom: 80px; /* Place the button at the bottom of the page */
+}
+
+.Btn2 { 
+  bottom: 140px; /* Place the button at the bottom of the page */
+}
+
+.Btn3 { 
+  bottom: 200px; /* Place the button at the bottom of the page */
+}
+
+.Btn4 { 
+  bottom: 260px; /* Place the button at the bottom of the page */
+}
+
+.Btn5 { 
+  bottom: 320px; /* Place the button at the bottom of the page */
+}
+
+.Btn6 { 
+  bottom: 380px; /* Place the button at the bottom of the page */
+}
+
+.Btn7 { 
+  bottom: 440px; /* Place the button at the bottom of the page */
+}
+
+.Btn8 { 
+  bottom: 500px; /* Place the button at the bottom of the page */
+}
+
+.Btn9 { 
+  bottom: 560px; /* Place the button at the bottom of the page */
+}
+
+.Btn10 { 
+  bottom: 620px; /* Place the button at the bottom of the page */
+}
+
+.Btn:hover {
+  background-color: #A41034; /* Add a dark-grey background on hover */
+  color: white; /* Set a background color */
+}

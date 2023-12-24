@@ -24,14 +24,23 @@
     //Tab changing code
     $(document).ready(function () {
       $('.tabshift').hide();
-      $('#Home').show();
+      $('.tabshift').addClass('m-fadeOut');
+      setTimeout(function() {
+        $('#Home').show();
+        $('#Home').removeClass('m-fadeOut');
+        $('#Home').addClass('m-fadeIn');
+      }, 300)
     });
     function tab(element) {
       var inner = element.innerHTML
+      $('.tabshift').removeClass('m-fadeIn');
+      $('.tabshift').addClass('m-fadeOut');
       $('.active').removeClass('active');
       $(element).parent().addClass('active');
       $('.tabshift').hide();
       $('#' + inner).show();
+      $('#' + inner).removeClass('m-fadeOut');
+      $('#' + inner).addClass('m-fadeIn');
     }
   </script>
 
@@ -52,7 +61,7 @@
         <span class="verticalDivider"></span>
 
         <li class="nav-item active">
-          <button class="nav-link btn" onclick="tab(this)">Home</button>
+          <button class="nav-link btn active" onclick="tab(this)" id="HomeAcc">Home</button>
         </li>
 
         <span class="verticalDivider"></span>
@@ -70,7 +79,7 @@
         <span class="verticalDivider"></span>
 
         <li class="nav-item">
-          <button class="nav-link btn" onclick="tab(this)">Cheat-Sheet</button>
+          <button class="nav-link btn" onclick="tab(this)">Other-Sites</button>
         </li>
 
         <span class="verticalDivider"></span>
@@ -113,6 +122,9 @@
       </div>
       <div onmousedown="dragMouseDown()">
         <p class="lead center" id="block" style="top: 100px; left: 1675px;">I never liked picking colours, change them if you wish<br><input class="form-control form-control-color" type="color" id="background-pick" value="#ffffff">Background<br><input class="form-control form-control-color" type="color" id="text-color" value="#000000">Text</p>
+      </div>
+      <div onmousedown="dragMouseDown()">
+        <p class="lead center" id="block" style="top: 500px; left: 1675px;">Move Me!</p>
       </div>
     </div>
 
@@ -224,23 +236,13 @@
 
     </div>
 
-    <div id="Cheat-Sheet" class="tabshift">
-      <h1 class="display-4">The Cheat Sheet Assignment</h1>
-      <span class="underlined lead">The site</span><br>
-      <a class="lead" href="https://bit.ly/3c6rJcm" target="_blank">https://bit.ly/3c6rJcm</a><br>
-      <span class="underlined lead">The story</span><br>
-      <p class="lead">This was at first a personal project to see what I can do with jQuery and javascript. The new
-        skills we were learning in Comp Eng related heavily to math so it was possible to make calculators for these new
-        topics, all while learning jQuery. That's what this site first was, just something to make calculators on. Then
-        we started learning more technology related to math in tech design. I also wanted to add more to the site so
-        when the cheat sheet assignment was introduced to include all topics covered in one document, this website was a
-        perfect choice. That's how this website went from a small project to a class assignment.</p><br><br>
-      Hello! This is me 2 years older. I am updating the portfolio a bit and thought I should come back and add a bit to
-      this assignment. We never ended up handing in the cheat sheet but I kept the cheat sheet website. To this day I go
-      back and add new topics in math and engineering to help myself out in the future. Nowadays the website is not an
-      assignment it is a personal project that helps me and my classmates to simple yet annoying calculations.
+    <div id="Other-Sites" class="tabshift">
+      <h1 class="display-4">Other-Sites</h1>
+      <span class="underlined lead">The sites</span><br>
+      <a class="lead" href="convert.html" target="_blank">Cheat Sheet</a><br>
+      <a class="lead" href="csg.html" target="_blank">Calculus Study Guide</a><br>
       <span class="underlined lead"><br></br>Skills</span><br>
-      <p class="lead">Skills both used and gained from the assignment</p>
+      <p class="lead">Skills both used and gained from these sites</p>
       <ul>
         <li class="lead">jQuery</li>
         <li class="lead">Bootstrap</li>

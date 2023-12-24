@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>
+		The Study Guide
+	</title>
+	<meta charset="utf-8">
+  <link rel="icon" href="CalcSiteLogo.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="stylecsg.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script>
+      //Tab changing code
+      $(document).ready(function(){
+        $('.tabshift').hide();
+        $('.Home').show();
+      });
+      
+      function tab(element)
+      {
+        var inner = element.innerHTML
+        $('.active').removeClass('active');
+        $(element).parent().addClass('active');
+        $('.tabshift').hide();
+        $('.'+inner).show();
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction(ele) {
+        var element = document.getElementById(ele.innerHTML+'1');
+        element.scrollIntoView({behavior: "smooth"});
+      }
+
+      function toggle(ele){
+        if (ele.className=="bi-eye-slash Btn hideBtn"){
+          $('#nav-buttons').hide();
+          ele.className="bi-eye Btn hideBtn"
+        }
+        else{
+          $('#nav-buttons').show();
+          ele.className="bi-eye-slash Btn hideBtn"
+        }
+      }
+
+    </script>
+  </head>
+
+  <body style="background-color:#A41034;">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a  id='Top1' class="navbar-brand" href="#">v1</a>
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav" >
+
+          <li class="nav-item active">
+            <button class="nav-link btn" onclick="tab(this)" title="Home">Home</button>
+          </li>
+          <li class="nav-item active">
+            <button class="nav-link btn" onclick="tab(this)" title="Limits">Unit-1</button>
+          </li>
+          <li class="nav-item active">
+            <button class="nav-link btn" onclick="tab(this)" title="Derivatives and Applications of Derivatives">Unit-2</button>
+          </li>
+          <li class="nav-item active">
+            <button class="nav-link btn" onclick="tab(this)" title="Curve Sketching">Unit-3</button>
+          </li>
+          <li class="nav-item active">
+            <button class="nav-link btn" onclick="tab(this)" title="Derivatives of Exponential and Trig Functions">Unit-4</button>
+          </li>
+          <li class="nav-item active">
+            <button class="nav-link btn" onclick="tab(this)" title="Vectors">Unit-5</button>
+          </li>
+          <li class="nav-item active">
+            <button class="nav-link btn" onclick="tab(this)" title="Algebraic Vectors">Unit-6</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div style="background-color:#A41034; padding-left: 30px; padding-right: 30px; color:white; margin-bottom: 150px;">
+      <i onclick="toggle(this)" class="bi-eye-slash Btn hideBtn"></i>
+      <div id='nav-buttons'>
+        <button onclick="topFunction(this)" title="Go to top" sytle="display: none;" id="top" class='Btn'>Top</button>
+
+        <div class='tabshift Unit-1'>
+          <button onclick="topFunction(this)" class='Btn1 Btn'>Limit</button>
+
+          <button onclick="topFunction(this)" class='Btn2 Btn'>Table-Method</button>
+
+          <button onclick="topFunction(this)" class='Btn3 Btn'>Graph</button>
+
+          <button onclick="topFunction(this)" class='Btn4 Btn'>Properties</button> 
+
+          <button onclick="topFunction(this)" class='Btn5 Btn'>Questions</button> 
+        </div>
+
+        <div class='tabshift Unit-2'>
+          <button onclick="topFunction(this)" class='Btn1 Btn'>Derivative</button>
+          
+          <button onclick="topFunction(this)" class='Btn2 Btn'>First-Principles</button>
+          
+          <button onclick="topFunction(this)" class='Btn3 Btn'>Rules-Of-Differentiation</button>
+
+          <button onclick="topFunction(this)" class='Btn4 Btn'>Purpose</button>
+
+          <button onclick="topFunction(this)" class='Btn5 Btn'>Velocity-Functions</button>
+
+          <button onclick="topFunction(this)" class='Btn6 Btn'>Word-Problems</button>
+          
+          <button onclick="topFunction(this)" class='Btn7 Btn'>Major-Problem-1-A</button>
+          
+          <button onclick="topFunction(this)" class='Btn8 Btn'>Major-Problem-1-B</button>
+        </div>
+
+        <div class='tabshift Unit-3'>
+          <button onclick="topFunction(this)" class='Btn1 Btn'>Algorithm</button>
+
+          <button onclick="topFunction(this)" class='Btn2 Btn'>Step-1</button>
+
+          <button onclick="topFunction(this)" class='Btn3 Btn'>Step-2</button>
+
+          <button onclick="topFunction(this)" class='Btn4 Btn'>Step-3</button>
+
+          <button onclick="topFunction(this)" class='Btn5 Btn'>Step-4</button>
+
+          <button onclick="topFunction(this)" class='Btn6 Btn'>Step-5</button>
+
+          <button onclick="topFunction(this)" class='Btn7 Btn'>Step-6</button>
+
+          <button onclick="topFunction(this)" class='Btn8 Btn'>Step-7</button>
+
+          <button onclick="topFunction(this)" class='Btn9 Btn'>Step-8</button>
+
+          <button onclick="topFunction(this)" class='Btn10 Btn'>Step-9</button>
+        </div>
+
+        <div class='tabshift Unit-4'>
+          <button onclick="topFunction(this)" class='Btn1 Btn'>Exponential</button>
+
+          <button onclick="topFunction(this)" class='Btn2 Btn'>Laws</button>
+
+          <button onclick="topFunction(this)" class='Btn3 Btn'>Exponential-Examples</button>
+
+          <button onclick="topFunction(this)" class='Btn4 Btn'>Derivatives-Trig</button>
+
+          <button onclick="topFunction(this)" class='Btn5 Btn'>Trig-Examples</button>
+
+          <button onclick="topFunction(this)" class='Btn6 Btn'>Optimization</button>
+
+          <button onclick="topFunction(this)" class='Btn7 Btn'>Major-Problem-2</button>
+        </div>
+
+        <div class='tabshift Unit-5'>
+          <button onclick="topFunction(this)" class='Btn1 Btn'>Review</button>
+
+          <button onclick="topFunction(this)" class='Btn2 Btn'>Bearings</button>
+
+          <button onclick="topFunction(this)" class='Btn3 Btn'>Vectors-VS-Scalars</button>
+
+          <button onclick="topFunction(this)" class='Btn4 Btn'>Definitons</button>
+
+          <button onclick="topFunction(this)" class='Btn5 Btn'>Laws-Of-Addition</button>
+
+          <button onclick="topFunction(this)" class='Btn6 Btn'>Laws-Of-Multiplication</button>
+
+          <button onclick="topFunction(this)" class='Btn7 Btn'>Unit-Vector</button>
+
+          <button onclick="topFunction(this)" class='Btn8 Btn'>Forces</button>
+
+          <button onclick="topFunction(this)" class='Btn9 Btn'>Velocity</button>
+        </div>
+
+        <div class='tabshift Unit-6'>
+          <button onclick="topFunction(this)" class='Btn1 Btn'>New-Things</button>
+
+          <button onclick="topFunction(this)" class='Btn2 Btn'>Dot-Product</button>
+          
+          <button onclick="topFunction(this)" class='Btn3 Btn'>Cross-Product</button>
+          
+          <button onclick="topFunction(this)" class='Btn4 Btn'>Projections</button>
+          
+          <button onclick="topFunction(this)" class='Btn5 Btn'>Applications</button>
+          
+          <button onclick="topFunction(this)" class='Btn6 Btn'>Major-Problem-3</button>
+        </div>
+      </div>
+
+      <div class="tabshift Home">
+        <h1 class="display-4">The Calculus Study Guide</h1>
+        <p class="lead">
+          By: Priyanshu.G <br>
+          Click on the navagation bar to access the sites components, Each Unit is explained breifly while working through a few examples, and the end of Unit 1, 2, and 4 are word problems that are a bit more diffcult. Don't feel bad if you can't do them, I likely cried while doing them myself.<br>
+          Hover over the navagation buttons to see what the unit title is!<br><br>Major Problem 1 - Unit 2<br><br>Major Problem 2 - Unit 4<br><br>Major Prolem 3 - Unit 6
+        </p>
+      </div>
+
+      <div class="tabshift text-center Unit-1">
+          <h1 class="display-4" style="border-style:none none solid none;">Limits</h1><br>
+          <h4 id='Limit1'>What is a limit?</h4>
+          <div class="lead block container">
+            The limit of a function "f(x)" is a mathematical tool for investigating the behaviour of "f(x)" {the y-values} as the value of x gets closer and closer to some number 'a'<br>
+            We write <img src="Limits/LimitOfFunction.jpg"><br>
+            (read as “the limit of "f(x)", as x approaches 'a', equals the number L”)<br>
+            Note: The values of the function f(x) become closer and closer to the number L as x gets closer and closer to the number 'a' from either side (but x does not equal 'a')
+          </div>
+          <h4>How do we solve for L?</h4>
+          <h4 id='Table-Method1'>Method 1 - Table</h4>
+          <div class="lead block">
+            Determine the limit of f(x)=x<sup>2</sup>+9 as x approaches 5<br>
+            Step 1 - Rewrite as a limit<br>
+            <img src="Limits/LimitExample.jpg"><br>
+            Step 2 - Draw out a table with x values slowly approaching 'a' from either side and evaluate the values
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th scope="col" colspan="2">Approaching x = 5 from the left (x &rarr; 5<sup>-</sup>)</th>
+                  <th scope="col" colspan="2">Approaching x = 5 from the right (x &rarr; 5<sup>+</sup>)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">x&lt;1</th>
+                  <td>f(x)=x<sup>2</sup>+9</td>
+                  <th>x>1</td>
+                  <td>f(x)=x<sup>2</sup>+9</td>
+                </tr>
+                <tr>
+                  <th scope="row">4.9</th>
+                  <td>33.01</td>
+                  <th>5.1</td>
+                  <td>35.01</td>
+                </tr>
+                <tr>
+                  <th scope="row">4.99</th>
+                  <td>33.9001</td>
+                  <th>5.01</td>
+                  <td>34.1001</td>
+                </tr>
+                <tr>
+                  <th scope="row">4.999</th>
+                  <td>33.990001</td>
+                  <th>5.001</td>
+                  <td>34.010001</td>
+                </tr>
+            </table><br>
+            Step 3 - Using the table you made, evaluate the limit!<br>
+            <img src="Limits/LimitExampleSol1.jpg"><br>
+            Therefore, as x approaches 5 from either direction, f(x) gets closer to <b>34</b>
+          </div><br>
+          <h4>Note: If the limit from the left does not equal the limit from the right, the limit does not exist!</h4><br>
+          <h4 id='Graph1'>Method 2 - Graph</h4>
+          <div class="lead block">
+            Given Graph: <img src="Limits/LimitGraph.jpg"><br>
+            Determine the following limits:<br>
+            <img src="Limits/LimitGraphQuestions.jpg"><br>
+            1. For question 1, if we look at the graph, we can see that the left and right of x=1 both approach 2.<br>Therefore, the limit of f(x) as x approaches 1 is <b>2</b><br>
+            2. For quesiton 2, once again using the graph, we can see that the graph approaches 1 when x = 2.<br>Therefore, the limit of f(x) as x approaches 2 is <b>1</b><br>
+            3. Question 3 is different from the other two.<br>f(x) as x approaches -1 from the left is 3, yet when approaching from the right it is 0.<br>This mean the limit <b>does not exist (DNE)</b>
+          </div><br>
+          <h4 id='Properties1'>Lets go over a few properties of limits and an example on how to use a few of them</h4>
+          <div class="lead block">
+          <img class="large-img" src="Limits/LimitProperties.jpg"><br></div>
+          <h4 id='Questions1'>Questions</h4>
+          <div class="lead block">
+            1<br><img class="med-img" src="Limits/LimitPropertiesQs/LimitPropertiesQ1.jpg"><br>
+            2<br><img class="med-img" src="Limits/LimitPropertiesQs/LimitPropertiesQ2.jpg"><br>
+          </div>
+      </div>
+
+      <div  class="tabshift text-center Unit-2">
+        <h1 class="display-4" style="border-style:none none solid none;">Derivatives & Applications of Derivatives</h1><br>
+        <h4 id="Derivative1">What is a derivative?</h4>
+        <div class="lead block container">
+          A derivative of a function is also a function, yet this function's values represent the original function's slope values at any x value<br>
+          The derivative of f(x) is denoted as f'(x)<br><u><b>
+          There are two ways to find f'(x) using f(x)</u><br>
+          1. First Principles<br>
+          2. Rules of differentiation</b>
+        </div><br>
+        <h4 id='First-Principles1'>First Principles</h4>
+        <div class="lead block">
+          <img src="Derivatives/DerivativesPrinciapalsMethod.jpg"><br>
+          Here is the First Principles method of finding the derivative of a function.<br>
+          You would replace f(x+h) with f(x) but all 'x' variables are replaced with (x+h). Then you would replace f(x) with the original function.<br>
+          From here you would simplify until the 'h' variable is out of the denominator.<br>
+          The reason 'h' needs to be removed is because 'h' will be replaced with 0.<br>
+          Once 'h' is 0 you can remove the limit and simplify, after which you will have found the derivative.<br><br>
+          Let us do an example<br>
+          <img  class="med-img"src="Derivatives/FirstPrincipalExample.jpg"><br>
+        </div><br>
+        <h4 id='Rules-Of-Differentiation1'>Rules Of Differentiation</h4>
+        <div class="lead block">
+          When given f(x) there are a set of rules you can follow that allow you to find f'(x). Let us take a look at them<br>
+          <img src="Derivatives/RulesOfDifferentiation.jpg"><br><br>
+          Lets go over a few examples<br>
+          <img src="Derivatives/RulesOfDifferentiationQuestions.jpg"><br>
+          If you need a reminder of any of the rules used while reading the questions, feel free to scroll up!
+        </div><br>
+        <h4 id='Purpose1'>What is the purpose or applications of derivatives?</h4>
+        <div class="lead block">
+          Remember that the derivative function represents the rate of change at any point of the main function.<br>
+          The most common application of derivatives is position, velocity, and acceleration graphs.<br>
+          The velocity function is the derivative of the position function and the acceleration function is the derivative of the velocity function.<br>
+          This also means that the acceleration function is the second derivative of the position graph (this just means the derivative of the derivative and is denoted as f''(x)).
+        </div><br>
+        <h4 id='Velocity-Functions1'>Example Of Velocity Functions</h4>
+        <div class="lead block">
+          <img  class="large-img" src="Derivatives/ApplicationsOfDerivativesExample.jpg"><br>
+          This can be duplicated and done the same for height graphs. The only difference is that when v(t)=0 the s(t) is at a maximum.
+        </div><br><br>
+        <h4 id='Word-Problems1'>One More Use</h4>
+        <div class="lead block">
+          There is one more application of derivatives, WORD PROBLEMS (more specifcally optimization problems)! <br>
+          For word problems we have an algorithm. Lets go over it<br><b><u>Algorithm for Solving Optimization Problems</u></b><p class="text-left">1. Understand the problem. Identify quantities that can vary. Draw a labeled diagram, if possible, and state the given and required quantities.<br>2. Determine a function that represents the quantity to be optimized. Then, using the given information, write this quantity in terms of one independent variable.<br>3. Determine the domain of the function to be optimized, using information given in the problem. The domain must be written in terms of the independent variable used in step 2.<br>4. Use the algorithm for extreme values to find the absolute maximum or minimum value of the function on the domain found in step 3.<br>&nbsp;&nbsp;&nbsp;&nbsp;<u>Algorithm for Determining the Extreme (Absolute) Values of a Function on a closed interval [a,b]</u><br>&nbsp;&nbsp;&nbsp;&nbsp;If a function f(x) has a derivative at each point on the closed interval a&lt;x&lt;b, calculate f(x) at:<br>&nbsp;&nbsp;&nbsp;&nbsp;All point where f'(x)=0 and end points on the domain<br>5. Use the results in step 4 to answer the original problem. Check your answer for validity. Does it make sense? Indicate correct units.</p>
+          <br>Let us do an example.<br><br>A chain of stores has been selling a line of socks for $7 each and has been averaging sales of 12000 socks sold a month. They decide to increase the price, but their market research indicates that for each $1 increase in price, sales will fall by 500. Find the price that will maximize their revenue.<br><br>Step 1 - Understand the problem and what variable can change<br>We know that the price of socks is the changing variable and the number sold is the affected factor. If the price and number sold is changing, then so is the revenue (the amount we want to maximize)<br>Step 2 - Determine a function that represents the quantity to be optimized in one variable<br><img src="Derivatives/NonMajorStep2.jpg"><br>Step 3 - Determine a domain<br><img src="Derivatives/NonMajorStep3.jpg"><br>Step 4 - Use the algorithm to find the max<br><img src="Derivatives/NonMajorStep4.jpg"><br>Step 5 - Check how right this seems and finialize<br>7+8.5 = $15.5. Therefore, the cost which would yield the max revenue is $15.5 per sock. Based on the parameters given, this makes sense.</div><br><br>
+        <h4 id='Major-Problem-1-A1'>Major Problem 1</h4>
+        <div class="lead block">
+          <b>This Question Has Two Parts!<br><p class='text-left'>a) An Octagonal prism with no roof is built to hold water until half its height. After half the height is filled the water will pour out of one wall that has been cut in half. The cost for the base is $2/m<sup>2</sup> and $1/m<sup>2</sup> for the sides. Due to order limits from your shipping company the length of the octagon's side cannot surpass 20 meters. What dimensions yield the lowest cost for 3500m<sup>3</sup> of total volume? How much water can this prism hold?</b></p><br>Step 1 - Draw a diagram with the labeled parts that can change<br><img  class="med-img" src="Derivatives/WordProblemDiagram.jpg"><br>
+          Step 2 - Make a function that represent the cost with a single variable (search up the area of a octagon)<br><img  class="med-img" src="Derivatives/WorldProblemStep2.jpg"><br>Step 3 - Find the domain.<br>Based on the algorithm above we know the domain we find must be in terms of 'a'<br>'a' is a real world length and so cannot be negative or 0<br>Also we know that the 'a' value must be less than or equal to 20 meters<br>Therefore, our domain is 0&lt;a&lt;=20 <br>Step 4 - Find the derivative, find where it is 0, find the local extremas<br><img  class="med-img" src="Derivatives/WordProblemStep4.jpg"><br>After we solve using a calculator for each 'a' value (0,derivative calulation and 20) we get these values<br><img src="Derivatives/WordProblemsExtremas.jpg"><br>We can clearly we that 6.554 is the correct value for 'a'<br>Step 5 - Find the value of 'h' and check if it feels right<br><img src="Derivatives/HeightOfWordProblem.jpg"><br>We can use the area of an octogon, our 'a' value and multiply this by 16.87 to find 3500, this means our answer works!<br>Therefore, an 'a' value of 6.554 and a height of 16.87 gives us 3500m<sup>3</sup> for our volume and also has the lowest cost.<br>Due to one of the walls being cut our max water storage is actually half the volume, 1750m<sup>3</sup><br><br><b id='Major-Problem-1-B1'>b) Let us first add some context. Earth's iron deposits have been depleted. You are a company on an offworld venture in mars. The costs in the first part were actually the cost for different thicknesses of iron ($1/m<sup>2</sup> for thin wall and $2/m<sup>2</sup> for thick base). Now the question. A new iron deposit has been found and the price of iron has crashed. The new prices for iron are $0.01/m<sup>2</sup> for thin walls and $0.02/m<sup>2</sup> for thick base (very big deposit). After the next shipment your company will be bought off for your worth. The next shipment is a 1000 of the pots you have been making. In order to get access to the new prices of extraction you need to build a miner for $1k. The new iron however has an issue with octagonal shapes, it can only form the shape at your required thickness when the length of the side is under 5m. Do you stay with the original prices or do you pay the $1k for the new prices? What is the total cost? Reason your choice.</b><br><br>To answer this question you must understand how derivatives work and why the algorithm for finding extremas works.<br>First let us compare the old equation and then the equation for cost<br><img src="Derivatives/WordProblemOldAndNew.jpg"><br>Note: the volume needed is the same so the formula to find the height is also the same<br><br>When finding the lowest cost we can ignore the +1000 because in the derivative it makes no difference.<br>We can also assume that the point where the derivative intercepts the x-axis is the same between old and new because the vertical stretch factor is the only difference between the two equations. This factor would not affect the zeros.<br>But then we can ask why does the extrema algorithm check the values of the domain ends? Especially since the derivative being 0 is almost always the max<br>The algorithm asks to check the domain ends because of a situation exactly like this. If we adjust the domain of 'a' to being between 0 and 5 instead of 0 and 20, we see a major change. Our derivative's intercept is not in the domain anymore. Yet if we look at the extrema values in our previous equation (this can be done with the new one but is not needed) we see that from 0 to 6.554 the cost is decreasing, after which the value keeps going up. Meaning our lowest cost will be our largest available 'a' value, 5.<br>Finally, we calulate the cost for each situation (remember to add 1000) and then compare the two costs<br><img src="Derivatives/FinalCosts.jpg"><br>Therefore, buying the new deposit of iron is the right choice and it will cost $14,290<br><br><b>You look to your boss in disbelief as your numbers show a scary difference is overall costs. You ask yourself what this change could mean for offworld prospecters. This massive deposit will truly change the course of offworld mining history.</b>
+        </div>
+      </div>
+
+      <div  class="tabshift text-center Unit-3">
+        <h1 class="display-4" style="border-style:none none solid none;">Curve Sketching</h1>
+        <h4 id="Algorithm1">How do you accurately sketch a curve?</h4>
+        <div class="lead block">To accurately sketch a curve we can use the <b><u>Algorithm For Graph Sketching</u></b><br>
+        <img src="Sketching/GraphSketching.jpg"><br>We will go over each step and an example on how to do them. Then we will do a final complete sketch of a graph
+        </div>
+        <h4 id="Step-11">Step 1</h4>
+        <div class="lead block">
+          The first step is fairly simple. Certain situations in math result in "undefined". Most of the time these situations can be identified. You must note down the x values that result in undefined. The most common situations are, the denominator cannot be 0 and you cannot square root a negative number! If you look at the examples in the algorithm we can solve for when the denominator is 0 and find 1 and -3 are out of the domain. For the second example when anything is to the power of (1/2) you are square rooting the number. The brackets result in a negative number when x is smaller than 1. Therefore the domain would be x>1.
+        </div>
+        <h4 id="Step-21">Step 2</h4>
+        <div class="lead block">
+          This step includes the phrase "(if easily determined)." This means it would only take a few steps to find the intercept. For example, using quadratic formula or factoring to find the x-intercepts, maybe even equating the function to 0 to find the x-intercepts. To find the y-intercepts just substitute the x's for 0.
+        </div>
+        <h4 id="Step-31">Step 3</h4>
+        <div class="lead block">
+          This step is only for when you have a rational function. You simpily set the denominator to 0 and find the values of x that. The second part is a bit more difficult, so let us go over the best way to do it.<br><img src="Sketching/Step3Sketching.jpg"><br>Note: if a factor can be cancelled out then there is a hole in that x-value instead of a asymptote. If the denominator is removed because of this cancellation then there is no VA, but a hole will be present.
+        </div>
+        <h4 id="Step-41">Step 4</h4>
+        <div class="lead block">
+          The first part of this step is to identify the degree of the numerator and denominator. If the numerator's degree is less than or equal to the denominator, then a HA exists. We need to find it and collect information around it. Let us first solve for the HA<br><img src="Sketching/Step41.jpg"><br><br>Next we need to find if the graph is above or below the HA, and if the HA is crossed<br><img src="Sketching/Step42.jpg">
+        </div>
+        <h4 id="Step-51">Step 5</h4>
+        <div class="lead block">
+          This is the last step for rational functions. If the numerator is only one larger than the denominator, then you can divide the two to find a oblique function. This fucntion is an asymptote. We can also look at the extreme x values to check if the graph is above or below. Let us do one<br><img src="Sketching/Step5.jpg">
+        </div>
+        <h4 id="Step-61">Step 6</h4>
+        <div class="lead block">
+          This step asks us to find critical points. What is a critical point? A critical point is any point where f'(x)=0 or f'(x) is undefined and is denoted as 'c'. Then we need to use the first derivative test. The test goes as follows: If f'(x) changes from positive to negative at 'c', then f(c) is a maximum. If f'(x) changes from negative to positve, then f(c) is a minimum. Lastly, if there is not change then f(c) is called a point of inflection. Let us do an example.<br><img src="Sketching/Step6.jpg">
+        </div>
+        <h4 id="Step-71">Step 7</h4>
+        <div class="lead block">
+          For this step we need to find the points of inflection, for this we need the second derivative (f''(x)). What is the second derivative represent? f''(x) determines the concavity, if f''(x) is positive then f(x) is concave up and if f''(x) is negative then f(x) is concave down. A point of inflection is anywhere that the concavity changes, and can only occues when f''(x)=0 or undefined. Let us find a few.<br><img src="Sketching/Step7.jpg">
+        </div>
+        <h4 id="Step-81">Step 8</h4>
+        <div class="lead block">
+          This step asks us to make a skinny coloumn chart, but what is a skinny coloumn chart? The best way to understand what a skinny coloumn chart is, is to see one! For this function the previous steps have already been performed, the values are filled in here.<br><img src="Sketching/Step8.jpg"><br>Using the chart underneath the skinny coloumn, we can see the type of curve each combination of positive or negative first and second derivatie make.
+        </div>
+        <h4 id="Step-91">Step 9</h4>
+        <div class="lead block">
+          For this final step we need to use everything we have collected to sketch a graph. We will be sketching the function used in the skinny coloumn chart above. Here is some extra info needed for the sketch: the x-intercept is x=0, the y-intercept is y=0, the HA is y=0, as x approaches infinity f(x) lies above the HA, and as x approaches negative infinity f(x) lies below the HA.<br><img src="Sketching/Step9.jpg"><br>Drawing out all the HAs and VAs, using the infinity limits, and plotting the major points, all aid in making an accurate sketch of a curve.<br><b>This process can be repeated for any type of curve, including polynomial.</b><br><br>Sometimes certain conditions are given that need to be satisfied. Seen as we didn't get to draw a polynomial, let us do a question with one<br><img src="Sketching/Step92.jpg">
+        </div>
+      </div>
+
+      <div  class="tabshift text-center Unit-4">
+        <h1 class="display-4" style="border-style:none none solid none;">Derivatives of Exponential and Trig Functions</h1>
+        <h4 id="Exponential1">What is the derivative of an exponential function?</h4>
+        <div class="lead block">
+          If f(x)=e<sup>g(x)</sup>, then f'(x)=e<sup>g(x)</sup>(ln (e))g'(x)=e<sup>g(x)</sup>g'(x)<br>If f(x)=b<sup>g(x)</sup>, then f'(x)=b<sup>g(x)</sup>(ln (b))g'(x)<br><br>But where did (ln (e)) go? To understand that we need to recall what 'ln' was. To do this, let us look at definiton of 'ln' and the properties of y=e<sup>x</sup> and y=(ln (x))<br>
+          <img src="DerivativeOfE&Trig/LNDefine.jpg"><br>From this we can see that ln e is 1 because if equate to log<sub>e</sub>e which is 1.<br>The following laws will help in understanding this.
+        </div><br>
+        <h4 id="Laws1">Laws with Base E and Natural Log</h4>
+        <div class="lead block"><br>
+          <img src="DerivativeOfE&Trig/Laws.jpg"><br>
+        </div><br>
+        <h4 id="Exponential-Examples1">Derivative Examples Of Exponential Functions</h4>
+        <div class="lead block"><br>
+          <img src="DerivativeOfE&Trig/Examples.jpg"><br>
+        </div><br>
+        <h4 id="Derivatives-Trig1">Derivatives Of Trig Functions</h4>
+        <div class="lead block"><br>
+          If f(x)=sin(x), then f'(x)=cos(x) and if f(x)=cos(x), then f'(x)=-sin(x)<br><b>&</b><br>If f(x)=sin(g(x)), then f'(x)=[cos(g(x))][g'(x)] and if f(x)=cos(g(x)), then f'(x)=[-sin(g(x))][g'(x)]<br><br>Seen as this is fairly straight forward, let us throw Tan in too<br><br>If f(x)=tan(x), then f'(x)=sec<sup>2</sup>(x) and if f(x)=tan(g(x)), then f'(x)=[sec<sup>2</sup>(g(x))][g'(x)]
+        </div><br>
+        <h4 id="Trig-Examples1">Examples Of Trig Function Derivatives</h4>
+        <div class="lead block"><br>
+          <img src="DerivativeOfE&Trig/TrigExamples.jpg">
+        </div><br>
+        
+        <h4 id="Optimization1">Optimization With Exponential Problems</h4>
+        <div class="lead block"><br>
+          One last part of Exponential functions is using them and their derivatives to solve optimization problems. Remember the algorithm for extreme values from Unit 2 (go back if you need to). Let us do an example<br>
+          <img src="DerivativeOfE&Trig/ExpoOpti.jpg"><br>
+        </div><br>
+        
+        <h4 id="Major-Problem-21">Major Problem 2</h4>
+        <div class="lead block"><br>
+        A robot is administering a drug within the patient, it then proceeds to track the drug's concentration within the patient. The robot is instructed to administer the drug again, when the concentration begins to decrease. The function that defines the concentration after the first injection is f(t)=t<sup>2</sup>e<sup>-t</sup>sin(5e), where t represents the hours after the first injection. The function g(t)=f(t-2)+f(t) defines the concentration after the second injection. The robot will then track the concentration. When does the highest concentration occur? Assume the robot monitors for 8 hours.<br>
+          <img class='large-img' src="DerivativeOfE&Trig/MajorPro22.jpg">
+        </div>
+      </div>
+
+      <div  class="tabshift text-center Unit-5">
+        <h1 class="display-4">Vectors</h1>
+        <h4 id="Review1">Review</h4>
+        <div class="lead block">
+          Here are some things to review for this unit:<br>
+          <p class='text-left'>1. Cosine and Sine Laws<br>2. Angle Theorems<br>3. Parallel Line Theorem:<br>4. The sum of the interior angles of any polygon with 'n' sides is 180(n−2) degrees</p>
+        </div><br>
+        <h4 id="Bearings1">Bearings</h4>
+        <div class="lead block">
+          So what is a bearing? A bearing is a way to describing direction. Let us go over the two ways we will be notating bearing.<br><br><b><u>True Bearing</u></b><br>1. Direction measured from due North and rotated clockwise until we have the given angle measure<br>2. If a bearing is negative, we move counterclockwise from due North<br>3. Always use 3 digits, to be in proper form<br>Here is an example of 045° in True Bearing<br><img src="Vectors/TrueBearingExample.jpg"><br><br><b><u>Quadrant Bearing</u></b><br>1. A direction measured from either North or South, then rotated the required angle measure toward the west or east<br>2. We rarely use East or West as an initial point of reference. For our purposes we will never us East or West as a final solution for the initial point of reference. ie/ write S30°E NOT E60°S<br>3. Always express the angle between 0° and 90°, to be in proper form<br>Here is an example of S70°E in Quadrant Bearing<br><img src="Vectors/QuadrantExample.jpg">
+        </div><br>
+        <h4 id="Vectors-VS-Scalars1">Vectors VS Scalars</h4>
+        <div class="lead block">
+          A Scalar only possesses Magnitude, examples include age, temperature, mass, time, energy, and volume.
+          <br>
+          A Vector on the other hand possesses both Magnitude and Direction, examples include forces, velocities, weight due to gravity, momentum and friction.<br>Here is an example of a diagram for a vector<br><img src="Vectors/Vector1.jpg">
+        </div>
+        <h4 id="Definitons1">Definitons</h4>
+        <div class="lead block">
+          Here are the definitions of differnet ways to compare vectors. Also shown here is how vectors can be noted<br>
+          <img src="Vectors/VectorDefinitions.jpg"><br>Another way to view a negative vector is by flipping the tail and head. This means that Vector -AB = Vector BA<br>
+        </div>
+        <h4 id="Laws-Of-Addition1">Laws Of Addition</h4>
+        <div class="lead block">
+          Vectors can be added together, so let us go over a few laws to make this easier<br>There are two laws to visualize this<br><img src="Vectors/TriangleLaw.jpg"><br><img src="Vectors/ParralleogramLaw.jpg"><br>Here are the properties of adding vectors<br><img src="Vectors/AddingProperties.jpg"><br>Let us do an example<br><img src="Vectors/AddingExample.jpg">
+        </div>
+        <h4 id="Laws-Of-Multiplication1">Laws Of Scalar Multiplication</h4>
+        <div class="lead block">
+          Multiplying a vector is just multiplying a vector's magnitude by a real number (if the number is negative then the direction of the vector goes opposite).<br>Here are the properties of Scalar Multiplication<br><img src="Vectors/MultiplyingProperties.jpg"><br>A quick example would be a vector of magnitude 400 multipled by 2 would become a vector of magnitude of 800, see how the direction was not mentioned, this is because multiplying by a scalar makes no change on the direction<br>
+        </div>
+        <h4 id="Unit-Vector1">The Unit Vector And Colinear Vectors</h4>
+        <div class="lead block">
+          Let us start with definitons<br>
+          <img src="Vectors/Colinnear.jpg"><br>
+          Let us do an example now<br>
+          <img src="Vectors/UnitVectors.jpg">
+        </div><br>
+        <h4 id="Forces1">Forces As Vectors</h4>
+        <div class="lead block">
+          Forces being represented as Vectors is ver similar to what we have been doing, yet now the magnitude is given a unit called Newtons and is denoted as 'N'. When working with forces we also need to keep in mind the force of gravity on our object, which is calculated by Force = Mass X Acceleration, where the Acceleration of gravity is 9.81m/s<sup>2</sup> and the Mass is in Kg (force still in Newtons).<br><br>There are two more terms, resultant and equilibrant<br><img src="Vectors/Res&Equi.jpg"><br>When all the resultant force on an object is 0, it is in a state called equilibrium.
+        </div><br>
+        <h4 id="Forces1">Horizontal And Vertical Components</h4>
+        <div class="lead block">
+          To break a vector into its components we can use the following formulas.<br><img src="Vectors/ComponentFormula.jpg"><br>Let us do an example<br><img src="Vectors/ComponentExample.jpg">
+        </div><br>
+        <h4 id="Velocity1">Velocity As A Vector</h4>
+        <div class="lead block">
+          Just like we did with forces, we can replace the magnitude of a vector with speed, and because vectors already have direction, we get a "veloctiy vector". Lets do a quick example of how to use velocity vectors<br><img class='large-img' src="Vectors/VelocityVec.jpg">
+        </div>
+      </div>
+      <div  class="tabshift text-center Unit-6">
+        <h1 class="display-4">Algebraic Vectors</h1>
+        <h4 id="New-Things1">New Things</h4>
+        <div class="lead block">
+          Before we get into the formulas and capabilites of algebraic vectors, let us take a look at everything new that is added for this unit<br><p class='text-left'>1. Vectors can be defined using coordinates like this (a,b), this vector would start at the origin then travel to point (a,b). This is called a position vector<br>2. Unit vectors i, j and k which have the values (1,0,0), (0,1,0) and (0,0,1) respectivly. Any position vector can be defined using these unit vectors.<br>3. To find the magnitude of a position vector use the following formula: &#8730;(a<sup>2</sup>+b<sup>2</sup>). This can be use in the 3-space by just including c<sup>2</sup><br>4. To multipy a position vector by a scalar, just mulitpy each component by that scalar ei. m(a,b,c) = (ma, mb, mc)<br>5. To add or subtract position vectors, just add or subtract each component ei. (a,b,c)-(d,e,f)= (a-d, b-e, c-f)</p><br>Let us do an example<br><img src="AlgebraicVectors/Algebraic.jpg"><br>One final note: When you are given two points and what to create a position vector using the two point, pick a head and tail, then subtract the tail from the head and you get a coordinate that represents the poisiton vector. Here is a quick example<br>P(9,4) and Q(2,3) find the position vector of vector PQ (not QP).<br><p class='text-left'>Step 1 - Make the formula<br>We need to subtract tail from the head, so that would be Q-P = (2,3)-(9,4)<br>Step 2 - Solve<br>PQ = (-7, -1)</p>
+        </div>
+        <h4 id="Dot-Product1">Dot Product</h4>
+        <div class="lead block">
+          First what is dot product?<br><img src="AlgebraicVectors/DotProduct.jpg"><br>Let us solve for one<br><img src="AlgebraicVectors/DotEx.jpg"><br>Here are some properties that will help in simplifying dot products<br><img src="AlgebraicVectors/DotPro.jpg"><br>A quick example on how to use them<br><img src="AlgebraicVectors/DotProEx.jpg"><br><br>Dot product can also be found using component form<br><img src="AlgebraicVectors/DotComp.jpg"><br>Note: if dot product>0 then angle is acute, if dot product&lt;0 then angle is obtuse, and finally if dot product is 0 then angle is 90 degrees<br>Now for an example<br><img src="AlgebraicVectors/DotCompEx.jpg">
+        </div>
+        <h4 id="Cross-Product1">Cross Product</h4>
+        <div class="lead block">
+          What is cross product?<br><img src="AlgebraicVectors/CrossProduct.jpg"><br>Let us do an example where we find the cross product and if it is going in or out of the page<br><img src="AlgebraicVectors/CrossProEx.jpg"><br><br>Here are some very useful properties<br><img src="AlgebraicVectors/CrossProPro.jpg"><br>Here is how you do cross product in component form<br><img src="AlgebraicVectors/CrossComp.jpg"><br>Let us do an example of this<br><img src="AlgebraicVectors/CrossCompEx.jpg">
+        </div>
+        <h4 id="Projections1">Projections</h4>
+        <div class="lead block">
+          What is a projection?<br><img class='large-img' src="AlgebraicVectors/Projections.jpg"><br>Let us do an example where we cover each type of projection<br><img src="AlgebraicVectors/ProjectionsEx.jpg">
+        </div>
+        <h4 id="Applications1">Applications</h4>
+        <div class="lead block">
+          So what is the point of all this? Well we can look at three different applications for dot product, cross product, and projections<br><br><b>Cross Product Application</b><br><img src="AlgebraicVectors/CrossApp.jpg"><br>Lets do an example of this<br><img src="AlgebraicVectors/CrossAppEx.jpg"><br><br><b>Dot Product Application</b><br><img src="AlgebraicVectors/DotProductApp.jpg"><br>Lets do an example<br><img src="AlgebraicVectors/DotProAppEx.jpg"><br><br><b>Projection</b><br>This application works best with a question<br><img src="AlgebraicVectors/ProjectEx.jpg">
+        </div><br>
+        <h4 id="Major-Problem-31">Major Problem 3</h4>
+        <div class="lead block">
+          You are a famous boxer on a redemption arc workout. You have a tire that weighs 30kg strapped to you as you run around a parallelogram park. You run from the top left to the bottom right and run a total distance of 30m. You drop your apple watch and the watch bugs out, it has stopped showing your distance but rather it shows the amount of work you have done. You measure the acute angle at your corner to 50° and you continue on your run to the bottom right of the park. You measure that you are pulling with a force of 500N and at an angle of 30°. You finish the last stretch of your run and your watch informs you that you did 35,000J of work from the bottom left to right of the park. What is the distance from the bottom left to right and what is the total area of the park?<br><img src="AlgebraicVectors/MajorPro3.jpg">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
