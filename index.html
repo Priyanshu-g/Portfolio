@@ -5,18 +5,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Portfolio</title>
+  <link rel="icon" type="image/png" href="PG.png">
   <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
     integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
     </script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
     integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
     </script>
+    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <script src="script.js"></script>
 
@@ -29,7 +33,7 @@
         $('#Home').show();
         $('#Home').removeClass('m-fadeOut');
         $('#Home').addClass('m-fadeIn');
-      }, 300)
+      }, 500)
     });
     function tab(element) {
       var inner = element.innerHTML
@@ -49,11 +53,6 @@
 <body id="background">
 
   <nav class="navbar navbar-expand-lg">
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
-      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
 
     <div class="collapse navbar-collapse justify-content-between" id="navbarNavDropdown">
       <ul class="navbar-nav">
@@ -78,12 +77,6 @@
 
         <span class="verticalDivider"></span>
 
-        <li class="nav-item">
-          <button class="nav-link btn" onclick="tab(this)">Other-Sites</button>
-        </li>
-
-        <span class="verticalDivider"></span>
-
         <li class="nav-item active">
           <button class="nav-link btn" onclick="tab(this)">ESP8266-Weather-Station</button>
         </li>
@@ -93,7 +86,37 @@
         <li class="nav-item active">
           <button class="nav-link btn" onclick="tab(this)">Match-3-Game</button>
         </li>
+        
+        <span class="verticalDivider"></span>
 
+        <li class="nav-item active">
+          <button class="nav-link btn" onclick="tab(this)">Sorcery</button>
+        </li>
+
+        <span class="verticalDivider"></span>
+
+        <li class="nav-item">
+          <button class="nav-link btn" onclick="tab(this)">Other-Sites</button>
+        </li>
+
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li> -->
+        
+        <span class="verticalDivider"></span>
+
+        <li class="nav-item active">
+          <button class="nav-link btn" onclick="tab(this)">Contact-Me</button>
+        </li>
+        
         <span class="verticalDivider"></span>
 
       </ul>
@@ -115,7 +138,7 @@
         <h1 id="block" style="top: 200px; left: 100px;" class="display-6">Hey,<br>I'm Priyanshu Ghosh</h1>
       </div>
       <div onmousedown="dragMouseDown()">
-        <p class="lead" id="block" style="top: 400px; left: 100px;">I am a computer science student at UWaterloo<br>If you're seeing this you have my resume<br>This portfolio expands on my projects</p>
+        <p class="lead" id="block" style="top: 400px; left: 100px;">I am a computer science student at UWaterloo<br>If you're seeing this you have my resume<br>This portfolio expands on my projects<br>(This entire site is hand coded!)</p>
       </div>
       <div onmousedown="dragMouseDown()">
         <p class="lead" id="block" style="top: 400px; left: 675px;">If you don't have my resume<br><button onclick="tab(this)" class="btn btn-outline-dark btn-large">Contact-Me</button></p>
@@ -237,7 +260,7 @@
     </div>
 
     <div id="Other-Sites" class="tabshift">
-      <h1 class="display-4">Other-Sites</h1>
+      <h1 class="display-4">Other Sites</h1>
       <span class="underlined lead">The sites</span><br>
       <a class="lead" href="convert.html" target="_blank">Cheat Sheet</a><br>
       <a class="lead" href="csg.html" target="_blank">Calculus Study Guide</a><br>
@@ -534,6 +557,26 @@
         <li class="lead">FPS Optimization</li>
       </ul><br>
       </p>
+    </div>
+
+    <div id="Contact-Me" class="tabshift">
+      <div class="flex" style="vertical-align: middle;">
+        <a class="item" href="mailto:pghosh@uwaterloo.ca"><i class="fa hop" style="font-size: 400px;color: black;">&#xf0e0;</i><p style="color: black;">pghosh@uwaterloo.ca</p></a>
+        <a class="item" href="https://github.com/Priyanshu-g" target="_blank"><i class="fa hop" style="font-size: 400px;color: black;">&#xf09b;</i><p style="color: black;">https://github.com/Priyanshu-g</p></a>
+        <a class="item" target="_blank"><i class="fa hop" style="font-size: 400px;color: black;">&#xf095;</i><p style="color: black;">647-909-6944</p></a>
+        <a class="item" href="https://www.linkedin.com/in/priyanshu-ghosh-261322179" target="_blank"><i class="fa hop" style="font-size: 400px;color: black;">&#xf08c;</i><p style="color: black;">https://www.linkedin.com/in/priyanshu-ghosh-261322179</p></a>
+      </div>
+    </div>
+
+    <div id="Sorcery" class="tabshift">
+      <h1 class="display-4">Sorcery (The recreation of hearthstone)</h1>
+      <p class="lead underlined">Quick Summary</p>
+      <p clas="lead">(C++)(XWindow)<br>This project is a monolithic C++ game. Based entirely on object oriented programming. The game involves two players, who own decks. They draw from decks into their hands, then play cards to the board. Cards can do a 
+      variety of things, primarily, Minions attack and can kill the other player. The basis of the code structure is to ensure a robust and future proof structre, such that adding new features and cards are easy. This project was done is a group of three, where I spearheaded the 
+      entire Card system (respectively, my teammates did UI and GUI). Below is the UML and a video showcasing the game (including start up).</p><br>
+      <img src="Sorcery/uml-final-1.png" class="poster" /><br>
+      You can play the game thru text only or via the graphical interface, this recording, showcases both.<br>
+      <source src="Sorcery/Game-Demo.mp4" type="video/mp4">
     </div>
 
   </div>
