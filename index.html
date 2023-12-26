@@ -65,6 +65,30 @@
 
         <span class="verticalDivider"></span>
 
+        <li class="nav-item active">
+          <button class="nav-link btn" onclick="tab(this)">Match-3-Game</button>
+        </li>
+        
+        <span class="verticalDivider"></span>
+
+        <li class="nav-item active">
+          <button class="nav-link btn" onclick="tab(this)">Sorcery</button>
+        </li>
+
+        <span class="verticalDivider"></span>
+
+        <li class="nav-item active">
+          <button class="nav-link btn" onclick="tab(this)">Dino-Game</button>
+        </li>
+
+        <span class="verticalDivider"></span>
+
+        <li class="nav-item">
+          <button class="nav-link btn" onclick="tab(this)">Other-Sites</button>
+        </li>
+        
+        <span class="verticalDivider"></span>
+
         <li class="nav-item">
           <button class="nav-link btn" onclick="tab(this)">Glue-Gun-Holder</button>
         </li>
@@ -81,36 +105,6 @@
           <button class="nav-link btn" onclick="tab(this)">ESP8266-Weather-Station</button>
         </li>
 
-        <span class="verticalDivider"></span>
-
-        <li class="nav-item active">
-          <button class="nav-link btn" onclick="tab(this)">Match-3-Game</button>
-        </li>
-        
-        <span class="verticalDivider"></span>
-
-        <li class="nav-item active">
-          <button class="nav-link btn" onclick="tab(this)">Sorcery</button>
-        </li>
-
-        <span class="verticalDivider"></span>
-
-        <li class="nav-item">
-          <button class="nav-link btn" onclick="tab(this)">Other-Sites</button>
-        </li>
-
-        <!-- <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li> -->
-        
         <span class="verticalDivider"></span>
 
         <li class="nav-item active">
@@ -575,8 +569,36 @@
       variety of things, primarily, Minions attack and can kill the other player. The basis of the code structure is to ensure a robust and future proof structre, such that adding new features and cards are easy. This project was done is a group of three, where I spearheaded the 
       entire Card system (respectively, my teammates did UI and GUI). Below is the UML and a video showcasing the game (including start up).</p><br>
       <img src="Sorcery/uml-final-1.png" class="poster" /><br>
-      You can play the game thru text only or via the graphical interface, this recording, showcases both.<br>
-      <source src="Sorcery/Game-Demo.mp4" type="video/mp4">
+      You can play the game thru text only or via the graphical interface, this recording, showcases both.<br><br><br><br>
+      <video width="860" height="480" controls>
+        <source src="Sorcery/Game-Demo.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video><br><br>
+    </div>
+
+    <div id="Dino-Game" class="tabshift">
+      <h1 class="display-4">Dino Game</h1>
+      <p class="lead underlined">Quick Summary</p>
+      <p class="lead">As you can guess, this game is a recreation of google's dino game. Although this is a lot simpler, the goal was the get the same feel during times where the wifi still works. One of the cool things I learned in this project is the idea of
+        deleting objects or resuing them. Instacnes of scenes, backgrounds, enemies, and obstacles were all moved rather than destroyed and made again when needed. This created a cool effect for the scene view and offered performance boosts in the game.<br>I also 
+        used animations in Unity for the first time which showed me the werid mechanics of animation.<br>(Also the dino get faster the higher your score)<br>
+      </p>
+      <div class="flex">
+        <div class="item2 center">
+          <p class="lead">This is a Game example</p>
+          <video width="860" height="480" controls>
+            <source src="Dino/Game-Demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video><br><br>
+        </div>
+        <div class="item2 center">
+          <p class="lead">This is the Scene View, collisions were turned off for this</p>
+          <video width="860" height="480" controls>
+            <source src="Dino/Scene-Demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video><br><br>
+        </div>
+      </div>
     </div>
 
   </div>

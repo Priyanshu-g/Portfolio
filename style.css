@@ -96,6 +96,14 @@ h1, h2, h3, h4, h5, h6, h7{
   text-align: center;
 }
 
+.item2{
+  width: 50%;
+  /* font-size: 490px; */
+  padding: 2em;
+  min-height: 500px;
+  text-align: center;
+}
+
 @media screen and (max-width: 600px){
   
   .flex {
@@ -103,6 +111,11 @@ h1, h2, h3, h4, h5, h6, h7{
   }
   
   .item {
+    width: auto;
+    min-height: 200px;
+  }
+  
+  .item2 {
     width: auto;
     min-height: 200px;
   }
