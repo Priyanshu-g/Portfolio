@@ -83,6 +83,12 @@
 
         <span class="verticalDivider"></span>
 
+        <li class="nav-item active">
+          <button class="nav-link btn" onclick="tab(this)">Desk-Company</button>
+        </li>
+        
+        <span class="verticalDivider"></span>
+
         <li class="nav-item">
           <button class="nav-link btn" onclick="tab(this)">Other-Sites</button>
         </li>
@@ -251,6 +257,42 @@
 
       </div>
 
+    </div>
+
+    <div id="Desk-Company" class="tabshift">
+      <h1 class="display-4">The Desk Company</h1>
+      <span class="underlined lead">The objective</span><br>
+      <p class="lead">I wanted to create a E-Commerce webpage for a fake company that makes desks. The goal was to store orders, pricing, and employee credentials in a SQL database. Users (Including you) can access and make order on the home page.
+        Then, using numbers stored in the database, employees can access their respective UI. 3 access levels are present, employee, supervisor, and manager. When people make orders using the home page, they use fixed pricing, pricing in the database, which can be changed by only the manager.
+        Employees can make sales calls and offer discounts, this they have a different order submission form, in which they can adjust the pricing. Employees can also view but not edit all orders. Superviors have everything the Employees have but also have the ability to edit and delete orders.
+        Managers once again have everything Superviors have but also can adjust fixed pricing (as mentioned above) and change the login keys for different access levels.
+        Here is the link to take a look at the site yourself, but you can only make more orders. Below is a video of all the other access levels, currently the employees password is available to you. Contact Me if you would like a live demo of the other sections.<br>
+        (I have not yet taken a security course and so the passowrd system is very simple).
+      </p><br><br>
+      <a class="lead" href="DeskAssignment/index.php" target="_blank">Desk Assignment</a><br><br>
+      <div class="flex center">
+        <div class="item3" style="padding: 0em;">
+          <p class="lead">This is what the Employees View is (The current password is 8)</p>
+          <video width="731" height="408" controls>
+            <source src="DeskAssignment/Employee.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video><br><br>
+        </div>
+        <div class="item3" style="padding: 0em;">
+          <p class="lead">This is what the Superviors View is</p>
+          <video width="731" height="408" controls>
+            <source src="DeskAssignment/Manager.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video><br><br>
+        </div>
+        <div class="item3" style="padding: 0em;">
+          <p class="lead">This is what the Managers View is</p>
+          <video width="731" height="408" controls>
+            <source src="DeskAssignment/Supervisor.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video><br><br>
+        </div>
+      </div>
     </div>
 
     <div id="Other-Sites" class="tabshift">

@@ -104,6 +104,14 @@ h1, h2, h3, h4, h5, h6, h7{
   text-align: center;
 }
 
+.item3{
+  width: 33%;
+  /* font-size: 490px; */
+  padding: 2em;
+  min-height: 500px;
+  text-align: center;
+}
+
 @media screen and (max-width: 600px){
   
   .flex {
